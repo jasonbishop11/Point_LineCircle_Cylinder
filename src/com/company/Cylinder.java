@@ -1,13 +1,11 @@
 package com.company;
 
 public class Cylinder {
-    private double radius;
     private Circle base;
     private double height;
 
-    public Cylinder(double r, double h){
-        radius = r;
-        base = new Circle(r);
+    public Cylinder(Circle c, double h){
+        base = c;
         height = h;
     }
 
@@ -16,6 +14,6 @@ public class Cylinder {
     }
 
     public double sa(){
-        return (2 * Math.PI * this.radius * this.height) + (2 * Math.PI * Math.pow(radius, 2));
+        return (2 * Math.PI * base.radius * this.height) + (2 * Math.PI * Math.pow(base.radius, 2));
     }
 }
