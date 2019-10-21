@@ -14,6 +14,6 @@ public class Cylinder {
     }
 
     public double sa(){
-        return (2 * Math.PI * base.radius * this.height) + (2 * Math.PI * Math.pow(base.radius, 2));
+        return ((base.circumference() * this.height) + base.area());
     }
 }
